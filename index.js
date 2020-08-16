@@ -1,5 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs")
+
 // array of questions for user
 const questions = [
     {
@@ -71,7 +72,7 @@ function writeToFile(fileName, data) {
     `## Tests\n\n${data.tests}\n\n` +
     `## Questions\n\nIf you have any questions, you can reach me through my email ${data.email} or connect with me on [GitHub](https://github.com/${data.github}).\n\n`;
 
-    fs.appendFile(fileName, data, error => {
+    fs.writeFile(fileName, data, error => {
         if(error) {
             console.log(error)
         }
