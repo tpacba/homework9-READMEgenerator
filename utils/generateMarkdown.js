@@ -2,7 +2,7 @@
 function generateMarkdown(data) {
   const license = data.license.split(' ').join('');
   const text = `# ${data.title}\n\n` +
-    `![readmegenerator](https://img.shields.io/badge/license-${license}-red.svg)\n\n` +
+    `![license](https://img.shields.io/badge/license-${license}-red.svg)\n\n` +
     `## Description\n\n${data.description}\n\n` +
     `## Table of Contents\n\n* [Installation](#installation)\n* [Usage](#usage)\n* [Contributing](#contributing)\n* [License](#license)\n* [Tests](#tests)\n* [Questions](#questions)\n\n` +
     `## Installation\n\n${data.installation}\n\n` +
